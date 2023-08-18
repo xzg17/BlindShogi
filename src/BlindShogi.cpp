@@ -1,1 +1,1 @@
-#include "BlindShogi.h"
+#include "BlindShogi.hpp"
