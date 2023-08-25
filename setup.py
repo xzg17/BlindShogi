@@ -6,7 +6,7 @@ os.environ['CC'] = 'gcc'
 src_dir = 'src'
 
 ext_modules = []
-ext_modules.append(Extension('BlindMiniShogi',[src_dir + '/TsuiBoard.cpp']))
+ext_modules.append(Extension('BlindMiniShogi',[src_dir + '/BlindBoard.cpp']))
 setup(
   name='custom',
   ext_modules = ext_modules,
