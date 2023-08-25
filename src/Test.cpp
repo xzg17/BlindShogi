@@ -4,8 +4,9 @@
 /*
 このへんにいろいろincludeして試すようのモジュール
 */
-#include"black_directions.cpp"
-
+#include"black_directions.hpp"
+#include"white_directions.hpp"
+#include"BlindBoard.cpp"
 typedef struct {
     
     PyObject_HEAD
