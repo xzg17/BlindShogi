@@ -6,6 +6,7 @@
 #define IS_PIECE(P) this->board[j] == P
 
 class Board{
+public:
     int board[110];
     int turn;
     int kpos[2];
