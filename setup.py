@@ -7,7 +7,7 @@ src_dir = 'src'
 
 ext_modules = []
 //ext_modules.append(Extension('BlindMiniShogi',[src_dir + '/BlindBoard.cpp']))
-ext_modules.append(Extension('BlindMiniShogi',[src_dir + '/Test.cpp']))
+ext_modules.append(Extension('TestMod',[src_dir + '/Test.cpp']))
 setup(
   name='custom',
   ext_modules = ext_modules,
