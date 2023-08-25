@@ -1,1 +1,0 @@
-#include "BlindShogi.hpp"
