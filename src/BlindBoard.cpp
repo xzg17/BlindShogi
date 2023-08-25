@@ -11,7 +11,7 @@ typedef struct {
 
 static int *board_init(Py_Board *self);
 static PyObject *dummy(PyObject *args){
-    return PyBuild_Value("i", 0);
+    return Py_BuildValue("i", 0);
 };
 static PyMethodDef Py_Board_methods[] = {
     //{"test", (PyCFunction)test_func, METH_VARARGS, "(ToT)"},
