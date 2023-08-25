@@ -9,7 +9,7 @@ typedef struct {
         Board *board;
 } Py_Board;
 
-static int *board_init(Py_Board *self, PyObject *args);
+static int *board_init(Py_Board *self);
 
 static PyMethodDef Py_Board_methods[] = {
     //{"test", (PyCFunction)test_func, METH_VARARGS, "(ToT)"},
