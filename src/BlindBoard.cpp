@@ -80,12 +80,12 @@ PyInit_BlindBoard(void){
         return NULL;
     }
         
-    if (PyType_Ready(&BlindBoard) < 0){
+    if (PyType_Ready(&BoardType) < 0){
         return NULL;
     }
 
-    Py_INCREF(&TestType);
-    PyModule_AddObject(m, "BlindBoard", (PyObject *) &BlindBoard);
+    Py_INCREF(&BoardType);
+    PyModule_AddObject(m, "BlindBoard", (PyObject *) &BoardType);
 
     return m;
 };
