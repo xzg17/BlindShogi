@@ -14,7 +14,7 @@ static PyObject *test_func(Py_Test_Class *self);
 
 static int *test_init(Py_Test_Class *self, PyObject *args);
 
-static PyMethodDef Py_Class_Board_methods[] = {
+static PyMethodDef Py_Test_Class_methods[] = {
     {"test", (PyCFunction)test_func, METH_VARARGS, "(ToT)"},
     {NULL} /* Sentinel */
 };
@@ -48,7 +48,7 @@ static PyTypeObject TestType = {
     0,                        /* tp_weaklistoffset */
     0,                        /* tp_iter */
     0,                        /* tp_iternext */
-    Py_Class_Board_methods,     /* tp_methods */
+    Py_Test_Class_methods,    /* tp_methods */
     0,                        /* tp_members */
     0,                        /* tp_getset */
     0,                        /* tp_base */
