@@ -12,6 +12,7 @@ typedef struct {
     PyObject_HEAD
     /* Type-specific fields go here. */
         Test_Class *test_class;
+        Board *board;
 } Py_Test_Class;
 
 
