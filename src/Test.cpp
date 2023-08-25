@@ -74,3 +74,30 @@ static int *test_init(Py_Test_Class *self, PyObject *args){
     }
     return 0;
 };
+
+static PyModuleDef test_module = {
+    PyModuleDef_HEAD_INIT,
+    "TestMod",
+    "Example module that creates an extension type.",
+    -1,
+    NULL
+};
+
+PyMODINIT_FUNC
+PyInit_TestMod(void){
+    PyObject *m;
+    
+    m = PyModule_Create(&test_module);
+    if (m == NULL){
+        return NULL;
+    }
+        
+    if (PyType_Ready(&TestType) < 0){
+        return NULL;
+    }
+
+    Py_INCREF(&TestType);
+    PyModule_AddObject(m, "MyPyClass", (PyObject *) &TestType);
+
+    return m;
+};
