@@ -6,7 +6,7 @@
 */
 #include"black_directions.hpp"
 #include"white_directions.hpp"
-#include"BlindBoard.cpp"
+#include"BlindBoard.hpp"
 typedef struct {
     
     PyObject_HEAD
