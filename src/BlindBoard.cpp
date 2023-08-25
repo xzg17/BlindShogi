@@ -1,12 +1,7 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include "BlindBoard.hpp"
-/*
-このへんにいろいろincludeして試すようのモジュール
-*/
-#include"black_directions.hpp"
-#include"white_directions.hpp"
-#include"BlindBoard.hpp"
+
 typedef struct {
     
     PyObject_HEAD
