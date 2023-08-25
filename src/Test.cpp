@@ -20,7 +20,7 @@ static PyMethodDef Py_Class_Board_methods[] = {
 };
 
 
-static PyTypeObject CustomType = {
+static PyTypeObject TestType = {
     PyVarObject_HEAD_INIT(NULL, 0) "custom.Custom", /* tp_name */
     sizeof(Py_Test_Class),                           /* tp_basicsize */
     0,                                              /* tp_itemsize */
