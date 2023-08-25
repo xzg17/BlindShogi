@@ -4,7 +4,7 @@
 /*
 このへんにいろいろincludeして試すようのモジュール
 */
-
+#include"black_directions.cpp"
 
 typedef struct {
     
