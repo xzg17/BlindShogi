@@ -69,9 +69,7 @@ static int *test_init(Py_Test_Class *self, PyObject *args){
     int num;
     if (PyArg_ParseTuple(args, "i", &num)) {
         self->test_class = new Test_Class(num);        
-    } else {
-        PyErr_SetString(PyExc_ValueError, "Invalid arguments.");        
-    }
+    };
     return 0;
 };
 
