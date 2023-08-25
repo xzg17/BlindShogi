@@ -9,7 +9,7 @@ ext_modules = []
 #ext_modules.append(Extension('BlindMiniShogi',[src_dir + '/BlindBoard.cpp']))
 ext_modules.append(Extension('TestMod',[src_dir + '/Test.cpp']))
 setup(
-  name='custom',
+  name='Test',
   ext_modules = ext_modules,
   url="https://github.com/xzg17/BlindShogi"
 )
