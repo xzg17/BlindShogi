@@ -101,7 +101,7 @@ PyInit_TestMod(void){
     }
 
     Py_INCREF(&TestType);
-    PyModule_AddObject(m, "MyPyClass", (PyObject *) &TestType);
+    PyModule_AddObject(m, "TestMod", (PyObject *) &TestType);
 
     return m;
 };
