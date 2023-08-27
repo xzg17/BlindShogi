@@ -12,7 +12,7 @@ typedef struct {
 } Py_Test_Class;
 
 
-static PyObject *test_func(Py_Test_Class *self, PyObject *args);
+static PyObject *test_func(Py_Test_Class *self, PyObject *args);//引数なしのばあいでもPyObject *argsがないとimport時にundefined symbolでImportErrorが起きる
 
 static int test_init(Py_Test_Class *self, PyObject *args);
 
