@@ -10,6 +10,7 @@ typedef struct {
 } Py_Board;
 
 static int *board_init(Py_Board *self);
+static PyObject *pseudo_moves(Py_Board *self, PyObject *args);
 static PyObject *dummy(Py_Board *self, PyObject *args){
     return Py_BuildValue("i", 0);
 };
