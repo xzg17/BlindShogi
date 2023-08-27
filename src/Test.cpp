@@ -14,7 +14,7 @@ typedef struct {
 
 static PyObject *test_func(Py_Test_Class *self, PyObject *args);
 
-static int *test_init(Py_Test_Class *self, PyObject *args);
+static int test_init(Py_Test_Class *self, PyObject *args);
 
 static PyMethodDef Py_Test_Class_methods[] = {
     {"test", (PyCFunction)test_func, METH_NOARGS, "(ToT)"},
@@ -67,7 +67,7 @@ static PyObject *test_func(Py_Test_Class *self){
     return Py_BuildValue("i", self->test_class->num);
 };
 
-static int *test_init(Py_Test_Class *self, PyObject *args){
+static int test_init(Py_Test_Class *self, PyObject *args){
     int num;
     if (PyArg_ParseTuple(args, "i", &num)) {
         self->test_class = new Test_Class(num);        
