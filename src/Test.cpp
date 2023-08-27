@@ -12,7 +12,7 @@ typedef struct {
 } Py_Test_Class;
 
 
-static PyObject *test_func(Py_Test_Class *self);
+static PyObject *test_func(Py_Test_Class *self, PyObject *args);
 
 static int test_init(Py_Test_Class *self, PyObject *args);
 
@@ -63,7 +63,7 @@ static PyTypeObject TestType = {
     PyType_GenericNew,        /* tp_new */
 };
 
-static PyObject *test_func(Py_Test_Class *self){
+static PyObject *test_func(Py_Test_Class *self, PyObject *args){
     return Py_BuildValue("i", self->test_class->num);
 };
 
