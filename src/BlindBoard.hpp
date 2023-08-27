@@ -142,7 +142,7 @@ int Board::nondrop_moves(int *moves, int *knight_moves, int *PP_moves, int *toP_
                         black_PP_direction_LUD(PP_moves, this->board, j);
                         if(j == BLACK_SILVER){
                             black_direction_RUD(moves, this->board, j);
-                            black_fromP_direction_RUD(fromP_moves, this->board, j);
+                            //black_fromP_direction_RUD(fromP_moves, this->board, j);
                         }else if(5 <= j){
                             //この時点で金以上の動きが保証されている。成れるのは飛車のみ。
                             black_direction_R(moves, this->board, j);
