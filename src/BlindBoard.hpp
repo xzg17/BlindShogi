@@ -1,8 +1,7 @@
 #include "indices.hpp"
 #include "piece_macros.hpp"
-#include "black_directions.hpp"
 #include "black_directions.cpp"
-#include "white_directions.hpp"
+#include "white_directions.cpp"
 
 #define IS_PIECE(P) this->board[j] == P
 
