@@ -37,6 +37,20 @@ Board::Board(){
     for(int i = 0;i < 110;i++){
         this->board[i] = start_board[i];
     };
+    this->black_hands[1] = 0;
+    this->black_hands[2] = 0;
+    this->black_hands[3] = 0;
+    this->black_hands[4] = 0;
+    this->black_hands[5] = 0;
+    this->black_hands[6] = 0;
+    this->black_hands[7] = 0;
+    this->white_hands[1] = 0;
+    this->white_hands[2] = 0;
+    this->white_hands[3] = 0;
+    this->white_hands[4] = 0;
+    this->white_hands[5] = 0;
+    this->white_hands[6] = 0;
+    this->white_hands[7] = 0;
     this->turn = 1;
     this->kpos[0] = 51;
     this->kpos[1] = 59;
