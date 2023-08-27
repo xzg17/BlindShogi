@@ -9,6 +9,7 @@
 - - x
 1 - -
 */
+#include "piece_macros.hpp"
 int black_dir_to_dis[10] = {-11, -10, -9, -1, 1, 9, 10, 11}; 
 int black_knight_dir_to_dis[2] = {-12, 8}; 
 
