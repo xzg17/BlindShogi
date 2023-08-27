@@ -10,11 +10,10 @@ typedef struct {
 } Py_Board;
 
 static int *board_init(Py_Board *self);
-static PyObject *dummy(PyObject *args){
+static PyObject *dummy(Py_Board *self, PyObject *args){
     return Py_BuildValue("i", 0);
 };
 static PyMethodDef Py_Board_methods[] = {
-    //{"test", (PyCFunction)test_func, METH_VARARGS, "(ToT)"},
     {"dummy", (PyCFunction)dummy, METH_NOARGS, "(ToT)"},
     {NULL} /* Sentinel */
 };
