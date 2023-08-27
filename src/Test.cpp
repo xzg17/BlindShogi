@@ -15,12 +15,12 @@ typedef struct {
 } Py_Test_Class;
 
 
-static PyObject *test_func(Py_Test_Class *self);
+static PyObject *test_func(Py_Test_Class *self, PyObject *args);
 
 static int *test_init(Py_Test_Class *self, PyObject *args);
 
 static PyMethodDef Py_Test_Class_methods[] = {
-    {"test", (PyCFunction)test_func, METH_VARARGS, "(ToT)"},
+    {"test", (PyCFunction)test_func, METH_NOARGS, "(ToT)"},
     {NULL} /* Sentinel */
 };
 
