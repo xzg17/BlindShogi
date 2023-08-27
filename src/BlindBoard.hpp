@@ -1,6 +1,6 @@
 #include "indices.hpp"
 #include "piece_macros.hpp"
-#include "black_directions.hpp"//なんかhppの方をincludeしたらimport時にundefined symbolでImportErrorが起きる
+#include "black_directions.cpp"//なんかhppの方をincludeしたらimport時にundefined symbolでImportErrorが起きる
 #include "white_directions.cpp"
 
 #define IS_PIECE(P) this->board[j] == P
