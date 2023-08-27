@@ -78,7 +78,7 @@ static int *test_init(Py_Test_Class *self, PyObject *args){
     return 0;
 };
 
-static PyModuleDef test_module = {
+static struct PyModuleDef test_module = {
     PyModuleDef_HEAD_INIT,
     "TestMod",
     "Example module that creates an extension type.",
