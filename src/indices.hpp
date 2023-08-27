@@ -2,6 +2,8 @@
 #define _INDICES_HPP_
 
 #include "piece_macros.hpp"
+constexpr int normal_drop_pieces[4] = {BLACK_BISHOP, BLACK_SILVER, BLACK_ROOK, BLACK_GOLD};
+constexpr int normal_drops[8] = {-1, -1, 0, -1, -1, 1, 2, 3};
 constexpr int non_dumyy_indices[81] = {
     11, 21, 31, 41, 51, 61, 71, 81, 91, 
     12, 22, 32, 42, 52, 62, 72, 82, 92, 
