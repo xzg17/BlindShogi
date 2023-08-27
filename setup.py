@@ -6,7 +6,7 @@ os.environ['CC'] = 'gcc'
 src_dir = 'src'
 
 ext_modules = [Extension('TestMod',[src_dir + '/Test.cpp'])]
-ext_modules.append(Extension('BlindBoard',[src_dir + '/BlindBoard.cpp']))
+ext_modules.append(Extension('BlindBoard',[src_dir + '/black_directions.cpp', src_dir + '/BlindBoard.cpp']))
 setup(
   name='Test',
   ext_modules = ext_modules,
