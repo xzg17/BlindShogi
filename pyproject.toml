@@ -1,3 +1,6 @@
 [project]
 name = "pytorchtest"
 version = "0.1"
+
+[tool.setuptools]
+packages = ["src", "src/MyLayers.py"]
