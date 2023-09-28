@@ -1,3 +1,4 @@
+import cshogi
 import torch
 from torch import nn
 import random
