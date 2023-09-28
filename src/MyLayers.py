@@ -7,6 +7,7 @@ class Test(nn.Module):
     super().__init__()
     self.board = cshogi.Board()
   def forward(self, input_tensor):
+    print(self.board.turn)
     return input_tensor
     
 class Flatten(nn.Module):
