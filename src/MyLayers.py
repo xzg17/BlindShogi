@@ -2,6 +2,13 @@ import cshogi
 import torch
 from torch import nn
 import random
+class Test(nn.Module):
+  def __init__(self):
+    super().__init__()
+    self.board = cshogi.Board()
+  def forward(self, input_tensor):
+    return input_tensor
+    
 class Flatten(nn.Module):
   def forward(self, input_tensor):
     if input_tensor.ndim == 3:
