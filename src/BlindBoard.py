@@ -1,4 +1,4 @@
-import Extra
+from Extra import *
 import cshogi
 from copy import deepcopy
 
