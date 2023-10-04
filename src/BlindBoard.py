@@ -157,7 +157,7 @@ class BlindBoard:
       if self.board.is_check():
         pass
       elif usi[1]== "*":
-        self.no_check_invalid_drop_history_board[self.board.turn][to_row][to_col] = 1.0
+        self.no_check_invalid_drop_history_board[self.board.turn][0][to_row][to_col] = 1.0
         pass
     self.blindness = 0
     return info #0:反則, 1:歩, 2:香, 3:桂, 4:銀, 5:角, 6:飛, 7:金, 8:無
