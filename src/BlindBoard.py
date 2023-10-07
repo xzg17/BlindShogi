@@ -87,7 +87,7 @@ class BlindBoard:
 
   def pseudo_legal_moves(self):
     if not self.blindness:
-      self.blind()
+      self.set_blind()
     return self.blind.pseudo_legal_moves
 
   def push_usi(self, usi):
@@ -229,7 +229,7 @@ class BlindBoard:
             pieces[i] = 0
       return pieces
 
-  def blind(self):
+  def set_blind(self):
     if not self.blindness:
       l = self.board.pieces
       t = self.board.pieces_in_hand
