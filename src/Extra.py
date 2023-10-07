@@ -6,17 +6,21 @@ usi_str = "0abcdefghi"
 piece_dict1 = {"FU": "P", "KY": "L", "KE": "N", "GI": "S", "KI": "G", "KA": "B", "HI": "R"}
 drop_dict = {"P":1, "L":2, "N":3, "S":4, "B":5, "R":6, "G":7}
 
-def rotate_boards(boards: list[list[list[float]]], rotate: int = 1) -> list[list[list[float]]]:
-  if rotate:
-    length = len(boards)
-    rotated_boards = [[[0.0 for k in range(9)]for j in range(9)] for i in range(length)]
-    for i in range(length):
-      for j in range(9):
-        for k in range(9):
-          rotated_boards[i][8 - j][8 - k] = boards[i][j][k]
-    return rotated_boards
-  else:
-    return boards
+def rotate_boards(boards):
+  length = len(boards)
+  rotated_boards = [[[0.0 for k in range(9)]for j in range(9)] for i in range(length)]
+  for i in range(length):
+    for j in range(9):
+      for k in range(9):
+        rotated_boards[i][8 - j][8 - k] = boards[i][j][k]
+  return rotated_boards
+
+def soft_max_choice(arr, t):
+  arr /= t
+  arr -= arr.max()
+  probs = np.exp(arr)
+  probs /= probs.sum()
+  return np.random.choice(len(arr), p = probs)
 
 def usi_to_int(usi, turn):
   dir = 0
@@ -87,3 +91,30 @@ def usi_to_int(usi, turn):
     if usi[-1] == "+":
       dir += 10
   return 81 * dir + move_to
+
+def usi_to_viewer(kif):
+  local_drop_dict = {"P": "FU", "L": "KY", "N": "KE", "S": "GI", "G": "KI", "B": "KA", "R": "HI"}
+  local_piece_list = ["ZZ", "FU", "KY", "KE", "GI", "KA", "HI", "KI", "OU", "TO", "NY", "NK", "NG", "UM", "RY"]
+  viewer = "&kifu="
+  board = cshogi.Board()
+  t_sign = "+-"
+  for usi in kif:
+    move = board.move_from_usi(usi)
+    if usi[1] == "*":
+      viewer += t_sign[board.turn]
+      viewer += "00"
+      viewer += usi[2] + usi_dict[usi[3]]
+      viewer += local_drop_dict[usi[0]]
+    else:
+      viewer += t_sign[board.turn]
+      viewer += usi[0] + usi_dict[usi[1]]
+      viewer += usi[2] + usi_dict[usi[3]]
+      p = board.pieces[int(usi[0]) * 9 + int(usi_dict[usi[1]]) - 10] % 16
+      if usi[-1] == "+":
+        p += 8
+      viewer += local_piece_list[p]
+    if board.is_legal(move):
+      board.push(move)
+  print(viewer)
+  print()
+  return viewer
