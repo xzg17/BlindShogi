@@ -150,7 +150,7 @@ class BlindBoard:
         for to_usi in check_set:
           to_row = int(to_usi[0]) - 1
           to_col = int(usi_dict[to_usi[1]]) - 1
-          self.check_board[1 - self.board.turn][0][to_row][to_col] += 1.0
+          self.check_history_board[1 - self.board.turn][0][to_row][to_col] += 1.0
     else:
       self.invalid_board[0][to_row][to_col] += 1.0
       self.ill[self.board.turn] -= 1
