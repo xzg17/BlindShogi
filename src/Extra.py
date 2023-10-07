@@ -6,14 +6,17 @@ usi_str = "0abcdefghi"
 piece_dict1 = {"FU": "P", "KY": "L", "KE": "N", "GI": "S", "KI": "G", "KA": "B", "HI": "R"}
 drop_dict = {"P":1, "L":2, "N":3, "S":4, "B":5, "R":6, "G":7}
 
-def rotate_boards(boards):
-  length = len(boards)
-  rotated_boards = [[[0.0 for k in range(9)]for j in range(9)] for i in range(length)]
-  for i in range(length):
-    for j in range(9):
-      for k in range(9):
-        rotated_boards[i][8 - j][8 - k] = boards[i][j][k]
-  return rotated_boards
+def rotate_boards(boards: list[list[list[float]]], rotate: int = 1) -> list[list[list[float]]]:
+  if rotate:
+    length = len(boards)
+    rotated_boards = [[[0.0 for k in range(9)]for j in range(9)] for i in range(length)]
+    for i in range(length):
+      for j in range(9):
+        for k in range(9):
+          rotated_boards[i][8 - j][8 - k] = boards[i][j][k]
+    return rotated_boards
+  else:
+    return boards
 
 def soft_max_choice(arr, t):
   arr /= t
