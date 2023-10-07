@@ -87,7 +87,7 @@ class BlindBoard:
 
   def pseudo_legal_moves(self):
     if not self.blindness:
-      self.set_blind()
+      self.blind()
     return self.blind.pseudo_legal_moves
 
   def push_usi(self, usi):
