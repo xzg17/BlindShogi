@@ -245,6 +245,9 @@ class BlindBoard:
       self.blind.turn = self.board.turn
       self.blindness = 1
     return self.blind.pieces
+  
+  def reset_blind(self):
+    self.blindness = 0
 
   def convert_kif_to_lists(self, kif):#rotated 局面数*入力特徴量数*9*9と出力のセット
     win = 1
